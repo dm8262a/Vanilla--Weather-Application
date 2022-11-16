@@ -1,5 +1,5 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
+function formatDate(times) {
+  let date = new Date(times);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -19,12 +19,30 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
+
+  let months = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  let month = months[date.getMonth()];
+  let todaysDate = date.getDate();
+  return `${day}, ${month} ${todaysDate}, ${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
-  let temperatureElement = document.querySelector("#temperature");
+  let tempElement = document.querySelector("#temp");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
@@ -32,7 +50,9 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let conditionIconElement = document.querySelector("#conditionIcon");
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemp = response.data.main.temp;
+
+  tempElement.innerHTML = Math.round(celsiusTemp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -60,7 +80,28 @@ function requestedCity(event) {
   search(enteredCityElement.value);
 }
 
-search("New York");
+function showFartemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  let farTemp = (celsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(farTemp);
+}
+
+function showCelsiustemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", requestedCity);
+
+let farLink = document.querySelector("#far-link");
+farLink.addEventListener("click", showFartemp);
+
+let celciusLink = document.querySelector("#cel-link");
+celciusLink.addEventListener("click", showCelsiustemp);
+
+search("New York");

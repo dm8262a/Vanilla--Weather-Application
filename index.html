@@ -40,7 +40,7 @@
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
-              <li>Last updated: <span id="date"></span></li>
+              <li><span id="date"></span></li>
               <li id="description"></li>
             </ul>
           </div>
@@ -49,8 +49,11 @@
               <div class="d-flex weather-temperature">
                 <img src="" alt="clear" id="conditionIcon" class="float-left" />
                 <div class="float-left">
-                  <strong id="temperature"></strong>
-                  <span class="units">&deg;C|<a href="#">&deg;F </a></span>
+                  <strong id="temp"></strong>
+                  <span class="units">
+                    <a href="#" id="cel-link" class="active"> &deg;C </a>|
+                    <a href="#" id="far-link" class="active">&deg;F </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -67,9 +70,8 @@
             href="https://github.com/dm8262a/Vanilla--Weather-Application.git"
             target="blank"
           >
-            Open-source code
-          </a>
-          by Daniela Mojica
+            Open-source code </a
+          >by Daniela Mojica
         </small>
       </div>
     </div>
