@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mogra&display=swap"
+      rel="stylesheet"
+    />
+     <script
+      src="https://kit.fontawesome.com/e252a7f0d9.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,7 +30,7 @@
         <div class="weather-app">
           <form id="search-form" class="mb-4">
             <div class="row">
-              <div class="col-9">
+              <div class="col-8">
                 <input
                   type="search"
                   placeholder="Enter a city"
@@ -28,7 +38,7 @@
                   id="entered-city"
                 />
               </div>
-              <div class="col-3">
+              <div class="col-4">
                 <input
                   type="submit"
                   value="search"
@@ -51,7 +61,7 @@
                 <div class="float-left">
                   <strong id="temp"></strong>
                   <span class="units">
-                    <a href="#" id="cel-link" class="active"> &deg;C </a>|
+                    <a href="#" id="cel-link" class="active"> &deg;C </a><span class id="separator">|</span>
                     <a href="#" id="far-link" class="active">&deg;F </a>
                   </span>
                 </div>
@@ -59,8 +69,9 @@
             </div>
             <div class="col-6">
               <ul class="details">
-                <li>Humidity: <span id="humidity"></span> %</li>
-                <li>Wind: <span id="wind"></span> Km/h</li>
+              <li><i class="fa-solid fa-water"></i> Humidity: <span id="humidity"></span> %</li>
+              </ul>
+              <li><i class="fa-solid fa-wind"></i> Wind: <span id="wind"></span> Km/h</li>
               </ul>
             </div>
           </div>
