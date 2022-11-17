@@ -38,7 +38,7 @@ function formatDate(times) {
   let day = days[date.getDay()];
   let month = months[date.getMonth()];
   let todaysDate = date.getDate();
-  return `${day}, ${month} ${todaysDate}, ${hours}:${minutes}`;
+  return `${day}, ${month} ${todaysDate} (updated at: ${hours}:${minutes})`;
 }
 
 function displayTemperature(response) {
@@ -46,16 +46,20 @@ function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
+  let feelsLikeElement = document.querySelector("#feels-cel-link");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let conditionIconElement = document.querySelector("#conditionIcon");
 
   celsiusTemp = response.data.main.temp;
 
+  feelscelsiusTemp = response.data.feels_like;
+
   tempElement.innerHTML = Math.round(celsiusTemp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
+  feelsLikeElement.innerHTML = Math.round(feelsCelsiusTemp);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   conditionIcon.setAttribute(
@@ -93,7 +97,22 @@ function showCelsiustemp(event) {
   tempElement.innerHTML = Math.round(celsiusTemp);
 }
 
+function showFeelsFarTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  let feelsfarTemp = (feelsCelsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(feelsfarTemp);
+}
+
+function showFeelsCelTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.round(feelsCelsiusTemp);
+}
+
 let celsiusTemp = null;
+
+let feelsCelsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", requestedCity);
@@ -103,5 +122,11 @@ farLink.addEventListener("click", showFartemp);
 
 let celciusLink = document.querySelector("#cel-link");
 celciusLink.addEventListener("click", showCelsiustemp);
+
+let feelsFarLink = document.querySelector("#feels-far-link");
+feelsFarLink.addEventListener("click", showFeelsFarTemp);
+
+let feelsCelLink = document.querySelector("#feels-cel-link");
+feelsCelLink.addEventListener("click", showFeelsCelTemp);
 
 search("New York");

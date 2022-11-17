@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Mogra&display=swap"
       rel="stylesheet"
     />
-     <script
+    <script
       src="https://kit.fontawesome.com/e252a7f0d9.js"
       crossorigin="anonymous"
     ></script>
@@ -62,7 +62,8 @@
                 <div class="float-left">
                   <strong id="temp"></strong>
                   <span class="units">
-                    <a href="#" id="cel-link" class="active"> &deg;C </a><span class id="separator">|</span>
+                    <a href="#" id="cel-link" class="active"> &deg;C </a
+                    ><span class id="separator">|</span>
                     <a href="#" id="far-link" class="active">&deg;F </a>
                   </span>
                 </div>
@@ -70,15 +71,32 @@
             </div>
             <div class="col-6">
               <ul class="details">
-              <li><i class="fa-solid fa-water"></i> Humidity: <span id="humidity"></span> %</li>
+                <li>
+                  <i class="fa-solid fa-water"></i> Humidity:
+                  <span id="humidity"></span> %
+                </li>
               </ul>
-              <li><i class="fa-solid fa-wind"></i> Wind: <span id="wind"></span> Km/h</li>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-wind"></i> Wind:
+                  <span id="wind"></span> Km/h
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-temperature-full"></i> Feels like:
+                  <span class="feels-units">
+                    <a href="#" id="feels-cel-link" class="active"> &deg; C </a>
+                    <span class id="feels-like-separator">|</span>
+                    <a href="#" id="feels-far-link" class="active">&deg; F </a>
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
         </div>
         <small class="coder-details">
-          <a 
+          <a
             href="https://github.com/dm8262a/Vanilla--Weather-Application.git"
             target="blank"
             class="github-lik"

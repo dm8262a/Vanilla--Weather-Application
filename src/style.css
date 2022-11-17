@@ -12,13 +12,17 @@ h1 {
   color: rgb(249, 220, 173);
   font-size: 40px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 42px;
   margin-bottom: 0;
 }
 
 ul {
   margin: 0;
   padding: 0;
+}
+
+.separator {
+  color: antiquewhite;
 }
 
 li {
@@ -36,21 +40,30 @@ li:first-letter {
 }
 
 .weather-app {
+  background-color: rgb(126, 171, 213);
+}
+
+.weather-app #entered-city {
+  color: rgb(163, 161, 161);
+}
+
+.weather-app #button {
   background-color: #425e8d;
+  border-color: #425e8d;
 }
 
-.weather-app button {
-  color: rgb(196, 196, 196);
-}
-
-.weather-app .separator {
+.weather-app #separator {
   color: #ffffff;
 }
 
+.weather-app #feels-like-separator {
+  color: #ffffff;
+}
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
 }
+
 .weather-app {
   max-width: 600px;
   margin: 30px auto;
@@ -87,14 +100,12 @@ li:first-letter {
   cursor: default;
   text-decoration: none;
 }
-
-.weather-temperature .active:hover {
+.weather-temperature.active:hover {
   text-decoration: none;
 }
-.a-solid fa-water {
-  color: goldenrod;
-}
-
 .coder-details {
-  color: rgb(196, 196, 196);
+  color: rgb(163, 161, 161);
+}
+.github-lik {
+  color: rgb(126, 171, 213);
 }
