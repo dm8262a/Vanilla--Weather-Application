@@ -53,7 +53,7 @@ function displayTemperature(response) {
 
   celsiusTemp = response.data.main.temp;
 
-  feelscelsiusTemp = response.data.feels_like;
+  feelsCelsiusTemp = response.data.main.feels_like;
 
   tempElement.innerHTML = Math.round(celsiusTemp);
   cityElement.innerHTML = response.data.name;
@@ -99,14 +99,14 @@ function showCelsiustemp(event) {
 
 function showFeelsFarTemp(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temp");
+  let tempElement = document.querySelector("#feels-like");
   let feelsfarTemp = (feelsCelsiusTemp * 9) / 5 + 32;
   tempElement.innerHTML = Math.round(feelsfarTemp);
 }
 
 function showFeelsCelTemp(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#temp");
+  let tempElement = document.querySelector("#feels-like");
   tempElement.innerHTML = Math.round(feelsCelsiusTemp);
 }
 
