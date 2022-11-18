@@ -22,7 +22,7 @@ ul {
 }
 
 .separator {
-  color: antiquewhite;
+  color: #ffffff;
 }
 
 li {
@@ -39,13 +39,26 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+#cel-link {
+  color: blanchedalmond;
+}
+#far-link {
+  color: pink;
+}
+
 #feels-cel-link,
 #feels-far-link {
   cursor: default;
   text-decoration: none;
 }
-#feels-celcius-icon,#feels-far-icon {
-  color: rgb(249, 220, 173);
+
+#feels-celcius-icon {
+  color: blanchedalmond;
+  font-size: 15px;
+}
+
+#feels-far-icon {
+  color: pink;
   font-size: 15px;
 }
 
