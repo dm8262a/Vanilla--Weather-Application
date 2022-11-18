@@ -39,6 +39,16 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+#feels-cel-link,
+#feels-far-link {
+  cursor: default;
+  text-decoration: none;
+}
+#feels-celcius-icon,#feels-far-icon {
+  color: rgb(249, 220, 173);
+  font-size: 15px;
+}
+
 .weather-app {
   background-color: rgb(126, 171, 213);
 }
@@ -103,6 +113,7 @@ li:first-letter {
 .weather-temperature.active:hover {
   text-decoration: none;
 }
+
 .coder-details {
   color: rgb(163, 161, 161);
 }

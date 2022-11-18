@@ -46,7 +46,7 @@ function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
-  let feelsLikeElement = document.querySelector("#feels-cel-link");
+  let feelsLikeElement = document.querySelector("#feels-like");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let conditionIconElement = document.querySelector("#conditionIcon");

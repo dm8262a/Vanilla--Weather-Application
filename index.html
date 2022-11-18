@@ -62,9 +62,9 @@
                 <div class="float-left">
                   <strong id="temp"></strong>
                   <span class="units">
-                    <a href="#" id="cel-link" class="active"> &deg;C </a
+                    <a id="cel-link" class="active">&deg;C </a
                     ><span class id="separator">|</span>
-                    <a href="#" id="far-link" class="active">&deg;F </a>
+                    <a id="far-link" class="active">&deg;F </a>
                   </span>
                 </div>
               </div>
@@ -85,10 +85,16 @@
               <ul>
                 <li>
                   <i class="fa-solid fa-temperature-full"></i> Feels like:
+                  <span id="feels-like"></span>
                   <span class="feels-units">
-                    <a href="#" id="feels-cel-link" class="active"> &deg; C </a>
-                    <span class id="feels-like-separator">|</span>
-                    <a href="#" id="feels-far-link" class="active">&deg; F </a>
+                    <a id="feels-cel-link" class="active">
+                      <span id="feels-celcius-icon"> &deg;C</span></a
+                    >
+                    <span class id="feels-separator">|</span>
+                    <span class id="feels-like-separator"></span>
+                    <a id="feels-far-link" class="active"
+                      ><span id="feels-far-icon"> &deg;F</span></a
+                    >
                   </span>
                 </li>
               </ul>
