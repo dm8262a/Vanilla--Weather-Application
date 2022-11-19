@@ -133,3 +133,17 @@ li:first-letter {
 .github-lik {
   color: rgb(126, 171, 213);
 }
+.forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-date {
+  font-size: 16px;
+  color: #ffffff;
+}
+.forecast-temperature-max,
+.forecast-temperature-min {
+  font-size: 14px;
+  color: #ffffff;
+}
