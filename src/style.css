@@ -40,10 +40,10 @@ li:first-letter {
 }
 
 #cel-link {
-  color: blanchedalmond;
+  color: lavender;
 }
 #far-link {
-  color: lavender;
+  color: pink;
 }
 
 #feels-cel-link,
@@ -53,12 +53,12 @@ li:first-letter {
 }
 
 #feels-celcius-icon {
-  color: blanchedalmond;
+  color: lavender;
   font-size: 15px;
 }
 
 #feels-far-icon {
-  color: lavender;
+  color: pink;
   font-size: 15px;
 }
 
@@ -78,7 +78,7 @@ li:first-letter {
 }
 
 .forecast-title #forecast-cel-icon {
-  color: blanchedalmond;
+  color: lavender;
 }
 .weather-app {
   background-color: rgb(126, 171, 213);
