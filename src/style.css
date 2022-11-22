@@ -43,7 +43,7 @@ li:first-letter {
   color: blanchedalmond;
 }
 #far-link {
-  color: pink;
+  color: lavender;
 }
 
 #feels-cel-link,
@@ -58,10 +58,28 @@ li:first-letter {
 }
 
 #feels-far-icon {
-  color: pink;
+  color: lavender;
   font-size: 15px;
 }
 
+#forecast-close-line,
+#forecast-open-line {
+  color: #ffffff;
+  opacity: 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.forecast-title {
+  color: #ffffff;
+  text-align: center;
+  padding: 0;
+  font-size: 24px;
+}
+
+.forecast-title #forecast-cel-icon {
+  color: blanchedalmond;
+}
 .weather-app {
   background-color: rgb(126, 171, 213);
 }
@@ -127,23 +145,26 @@ li:first-letter {
   text-decoration: none;
 }
 
+.weather-app #forecast-temperatures {
+  color: #ffffff;
+}
 .coder-details {
   color: rgb(163, 161, 161);
 }
 .github-lik {
-  color: rgb(126, 171, 213);
+  color: rgb(217, 241, 243);
 }
 .forecast {
-  margin-top: 20px;
+  margin-top: 28px;
   text-align: center;
 }
 
 .forecast-date {
-  font-size: 16px;
+  font-size: 22px;
   color: #ffffff;
 }
 .forecast-temperature-max,
 .forecast-temperature-min {
-  font-size: 14px;
+  font-size: 2x;
   color: #ffffff;
 }
